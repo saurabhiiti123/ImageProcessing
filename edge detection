@@ -1,0 +1,13 @@
+pkg load image;
+
+frizzy = imread('frizzy.png');
+froomer = imread('froomer.png');
+imshow(frizzy);
+imshow(froomer);
+
+frizzy1 = edge(rgb2gray(frizzy),'canny');
+froomer1 = edge(rgb2gray(froomer),'canny');
+
+% Display common edge pixels
+imshow(frizzy1);
+imshow(froomer1);
